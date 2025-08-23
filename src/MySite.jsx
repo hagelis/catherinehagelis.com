@@ -108,7 +108,7 @@ const PersonalWebsite = () => {
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-gray-800 mb-6 tracking-tight">
               Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-800 to-green-900 relative">
-                Your Name
+                Catherine Hagelis
                 <div className="absolute -inset-1 bg-gradient-to-r from-green-800/20 to-green-900/20 blur-sm -z-10 rounded-lg"></div>
               </span>
             </h1>
@@ -303,7 +303,7 @@ const PersonalWebsite = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-gray-600">
-              © 2025 Your Name. Built with React, Vite, and Tailwind CSS.
+              © 2025 Catherine Hagelis. Built with React, Vite, and Tailwind CSS.
             </p>
           </div>
         </div>
