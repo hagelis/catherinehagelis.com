@@ -66,8 +66,8 @@ const PersonalWebsite = () => {
           <div className="text-center">
             {/* Photo placeholder */}
             <div className="mb-8">
-              <div className="w-32 h-32 mx-auto rounded-full overflow-hidden ring-2 ring-white/30">
-                <img src="/profile.jpg" alt="Profile" className="w-full h-full object-cover" />
+              <div className="w-52 h-52 mx-auto rounded-full overflow-hidden ring-2 ring-white/30">
+                <img src="/profileCrop.jpeg" alt="Profile" className="w-full h-full object-cover" />
               </div>
             </div>
 
