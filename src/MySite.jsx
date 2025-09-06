@@ -12,10 +12,10 @@ const PersonalWebsite = () => {
   ];
 
   const skills = [
-    { category: "Cloud Platforms", items: ["AWS","Azure"] },
+    { category: "Cloud Platforms", items: ["AWS"] },
     { category: "DevOps Tools", items: ["Docker","Kubernetes","Jenkins","GitHub Actions","Terraform"] },
-    { category: "Programming", items: ["Python","JavaScript","Go","Bash","Java"] },
-    { category: "Infrastructure", items: ["Linux","CI/CD","Monitoring","IaC","Networking"] }
+    { category: "Programming", items: ["Python","Bash","Java", "JavaScript", "C-Languages"] },
+    { category: "Infrastructure", items: ["Linux, macOS", "Windows (basic)", "CI/CD","Monitoring","IaC","Networking"] }
   ];
 
   return (
@@ -66,7 +66,7 @@ const PersonalWebsite = () => {
           <div className="text-center">
             {/* Photo */}
             <div className="mb-8">
-              <div className="w-52 h-52 mx-auto rounded-full overflow-hidden ring-2 ring-white/30">
+              <div className="w-52 h-52 mx-auto rounded-full overflow-hidden ring-4 ring-white/30">
                 <img src="/profileCrop.jpeg" alt="Profile" className="w-full h-full object-cover" />
               </div>
             </div>
