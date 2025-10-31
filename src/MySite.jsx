@@ -12,7 +12,7 @@ const PersonalWebsite = () => {
   ];
 
   const skills = [
-    { category: "Cloud Platforms", items: ["AWS"] },
+    { category: "Cloud Platforms", items: ["AWS, DigitalOcean"] },
     { category: "DevOps Tools", items: ["Docker","Kubernetes","Jenkins","GitHub Actions","Terraform"] },
     { category: "Programming", items: ["Python","Bash","Java", "JavaScript", "C-Languages"] },
     { category: "Infrastructure", items: ["Linux, macOS", "Windows (basic)", "CI/CD","Monitoring","IaC","Networking"] }
