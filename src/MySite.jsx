@@ -6,16 +6,27 @@ const PersonalWebsite = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const projects = [
-    { title: "Multi-Cloud Infrastructure", description: "Deployed scalable web application across AWS and Azure using Terraform for infrastructure as code, with automated CI/CD pipeline and monitoring.", tech: ["Terraform","AWS","Azure","Docker","GitHub Actions"], github: "#", live: "#" },
-    { title: "Kubernetes Cluster Setup", description: "Built and configured production-ready Kubernetes cluster with automated deployments, load balancing, and persistent storage solutions.", tech: ["Kubernetes","Docker","Helm","Prometheus","Grafana"], github: "#", live: "#" },
-    { title: "CI/CD Pipeline Automation", description: "Designed comprehensive CI/CD pipeline with automated testing, security scanning, and multi-environment deployments using GitOps practices.", tech: ["Jenkins","Docker","ArgoCD","SonarQube","AWS"], github: "#", live: "#" }
+    { title: "Personal Portfolio Website", 
+      description: "Built a responsive personal website using React, Vite, and Tailwind CSS, then containerized and deployed it to AWS using Docker and Terraform. This project showcases DevOps fundamentals including CI/CD automation, infrastructure as code, and cost-efficient cloud hosting.", 
+      tech: ["React","Vite","Tailwindcss","Docker","Terraform","AWS S3","Route 53"], 
+      github: "#", live: "#" },
+
+    { title: "AI Fitness Web App (Capstone Project)", 
+      description: "Collaborated with a small team to design and build an AI-powered fitness platform that generates personalized workout plans and exercise videos. My focus was on the front-end UI using React and Tailwind, integrating APIs for AI-generated content, and managing user interactions through dashboards.", 
+      tech: ["React", "Tailwind", "Node.js", "Express", "PostgreSQL", "REST APIs", "AI Integration"], 
+      github: "#", live: "#" },
+
+    { title: "Recipe Card Web App", 
+      description: "Developed a full-stack recipe management application that allows users to create, edit, and organize their favorite recipes. Implemented the front-end with React and Tailwind CSS, and built a Node.js + Express backend connected to a PostgreSQL database. Fully dockerized for local and cloud deployment.", 
+      tech: ["React", "Node.js", "Express", "PostgreSQL", "Docker", "Tailwind"], 
+      github: "#", live: "#" }
   ];
 
   const skills = [
     { category: "Cloud Platforms", items: ["AWS, DigitalOcean"] },
-    { category: "DevOps Tools", items: ["Docker","Kubernetes","Jenkins","GitHub Actions","Terraform"] },
-    { category: "Programming", items: ["Python","Bash","Java", "JavaScript", "C-Languages"] },
-    { category: "Infrastructure", items: ["Linux, macOS", "Windows (basic)", "CI/CD","Monitoring","IaC","Networking"] }
+    { category: "DevOps Tools", items: ["Docker","Terraform","GitHub Actions","Kubernetes","Jenkins"] },
+    { category: "Programming", items: ["Bash","Java", "JavaScript","Python","C-Languages"] },
+    { category: "Infrastructure", items: ["Linux, macOS", "Windows", "CI/CD","Monitoring","IaC","Networking"] }
   ];
 
   return (
@@ -144,7 +155,7 @@ const PersonalWebsite = () => {
       <section id="skills" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Skills & Technologies</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Skills and Technologies</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto"></div>
           </div>
 
