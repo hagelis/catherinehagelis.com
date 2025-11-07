@@ -96,7 +96,7 @@ const PersonalWebsite = () => {
               Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Catherine Hagelis</span>
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Recent CS Graduate passionate about DevOps, Cloud Infrastructure, and Building Scalable Systems
+              Recent Computer Science BS Graduate passionate about DevOps, Cloud Infrastructure, and Building Scalable Systems
             </p>
             <p className="text-gray-300 mb-8 max-w-3xl mx-auto">
               I'm actively seeking DevOps and Cloud Engineering opportunities where I can apply my Computer Science foundation 
