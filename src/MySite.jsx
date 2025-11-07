@@ -7,26 +7,36 @@ const PersonalWebsite = () => {
 
   const projects = [
     { title: "Personal Portfolio Website", 
-      description: "Built a responsive personal website using React, Vite, and Tailwind CSS, then containerized and deployed it to AWS using Docker and Terraform. This project showcases DevOps fundamentals including CI/CD automation, infrastructure as code, and cost-efficient cloud hosting.", 
+      description: "Developed a responsive personal website using React, Vite, and Tailwind CSS, then containerized and deployed it to AWS using Docker and Terraform. The site is fully automated with infrastructure as code and serves as a live example of practical DevOps deployment.", 
       tech: ["React","Vite","Tailwindcss","Docker","Terraform","AWS S3","Route 53"], 
-      github: "#", live: "#" },
+      github: "#", 
+      live: "#",
+      image: "/images/personal-site.jpeg",
+    },
 
     { title: "AI Fitness Web App (Capstone Project)", 
       description: "Collaborated with a small team to design and build an AI-powered fitness platform that generates personalized workout plans and exercise videos. My focus was on the front-end UI using React and Tailwind, integrating APIs for AI-generated content, and managing user interactions through dashboards.", 
       tech: ["React", "Tailwind", "Node.js", "Express", "PostgreSQL", "REST APIs", "AI Integration"], 
-      github: "#", live: "#" },
+      github: "#", 
+      live: "#", 
+      image: "/images/capstone.jpeg",
+    
+    },
 
     { title: "Recipe Card Web App", 
       description: "Developed a full-stack recipe management application that allows users to create, edit, and organize their favorite recipes. Implemented the front-end with React and Tailwind CSS, and built a Node.js + Express backend connected to a PostgreSQL database. Fully dockerized for local and cloud deployment.", 
       tech: ["React", "Node.js", "Express", "PostgreSQL", "Docker", "Tailwind"], 
-      github: "#", live: "#" }
+      github: "#", 
+      live: "#", 
+      image: "/images/recipe-app.jpeg",
+    }
   ];
 
   const skills = [
     { category: "Cloud Platforms", items: ["AWS, DigitalOcean"] },
     { category: "DevOps Tools", items: ["Docker","Terraform","GitHub Actions","Kubernetes","Jenkins"] },
-    { category: "Programming", items: ["Bash","Java", "JavaScript","Python","C-Languages"] },
-    { category: "Infrastructure", items: ["Linux, macOS", "Windows", "CI/CD","Monitoring","IaC","Networking"] }
+    { category: "Programming", items: ["Bash","Java", "JavaScript (React, Vite)","Python","C-Languages"] },
+    { category: "Infrastructure", items: ["Linux, macOS", "Windows","Monitoring","IaC","Tailwind CSS"] }
   ];
 
   return (
@@ -78,7 +88,7 @@ const PersonalWebsite = () => {
             {/* Photo */}
             <div className="mb-8">
               <div className="w-52 h-52 mx-auto rounded-full overflow-hidden ring-4 ring-white/30">
-                <img src="/profileCrop.jpeg" alt="Profile" className="w-full h-full object-cover" />
+                <img src="images/profileCrop.jpeg" alt="Profile" className="w-full h-full object-cover" />
               </div>
             </div>
 
@@ -209,9 +219,14 @@ const PersonalWebsite = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 transition-all md:hover:scale-105 hover:scale-[1.02]">
-                <div className="h-48 bg-gradient-to-br from-purple-400/20 to-pink-400/20 flex items-center justify-center">
-                  <Code size={60} className="text-white/60" />
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="h-full w-full object-cover transform hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
+
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-white mb-3">{project.title}</h3>
                   <p className="text-gray-300 mb-4 text-sm">{project.description}</p>
