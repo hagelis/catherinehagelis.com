@@ -9,12 +9,12 @@ const PersonalWebsite = () => {
     { title: "Personal Portfolio Website", 
       description: "Developed a responsive personal website using React, Vite, and Tailwind CSS, then containerized and deployed it to AWS using Docker and Terraform. The site is fully automated with infrastructure as code and serves as a live example of practical DevOps deployment.", 
       tech: ["React","Vite","Tailwindcss","Docker","Terraform","AWS S3","Route 53"], 
-      github: "#", 
-      live: "#",
+      github: "https://github.com/hagelis/catherinehagelis.com.git", 
+      live: "https://catherinehagelis.com",
       image: "/images/personal-site.jpeg",
     },
 
-    { title: "AI Fitness Web App (Capstone Project)", 
+    { title: "AI Fitness Web App (Capstone Project) (Work In Progress...)", 
       description: "Collaborated with a small team to design and build an AI-powered fitness platform that generates personalized workout plans and exercise videos. My focus was on the front-end UI using React and Tailwind, integrating APIs for AI-generated content, and managing user interactions through dashboards.", 
       tech: ["React", "Tailwind", "Node.js", "Express", "PostgreSQL", "REST APIs", "AI Integration"], 
       github: "#", 
@@ -23,7 +23,7 @@ const PersonalWebsite = () => {
     
     },
 
-    { title: "Recipe Card Web App", 
+    { title: "Recipe Card Web App (Work In Progress...)", 
       description: "Developed a full-stack recipe management application that allows users to create, edit, and organize their favorite recipes. Implemented the front-end with React and Tailwind CSS, and built a Node.js + Express backend connected to a PostgreSQL database. Fully dockerized for local and cloud deployment.", 
       tech: ["React", "Node.js", "Express", "PostgreSQL", "Docker", "Tailwind"], 
       github: "#", 
@@ -162,7 +162,13 @@ const PersonalWebsite = () => {
                   <Github size={24} />
                 </a>
 
-                <a href="#" className="text-white hover:text-purple-300 transition-colors" aria-label="Email"><Mail size={24} /></a>
+                <a 
+                  href={`mailto:${"cat.hagelis"}@${"gmail.com"}`} 
+                  className="text-white hover:text-purple-300 transition-colors" 
+                  aria-label="Email">
+                  <Mail size={24} />
+                </a>
+
               </div>
             </div>
           </div>
@@ -244,8 +250,7 @@ const PersonalWebsite = () => {
                     ))}
                   </div>
                   <div className="flex space-x-4">
-                    <a href={project.github} className="text-white hover:text-purple-300 transition-colors" aria-label="GitHub"><Github size={20} /></a>
-                    <a href={project.live} className="text-white hover:text-purple-300 transition-colors" aria-label="External link"><ExternalLink size={20} /></a>
+                    <a href={project.github} className="text-white hover:text-purple-300 transition-colors" aria-label="External link"><ExternalLink size={20} /></a>
                   </div>
                 </div>
               </div>
