@@ -102,22 +102,12 @@ const PersonalWebsite = () => {
               I'm actively seeking DevOps and Cloud Engineering opportunities where I can apply my Computer Science foundation 
               and growing expertise in cloud infrastructure, automation, and scalable system design.
             </p>
-
-            {/* Buttons: keep text white */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#projects" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105 text-center">
-                View My Projects
-              </a>
-              <a href="/resume.pdf" className="border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white/10 hover:text-white transition-all text-center">
-                Download Resume
-              </a>
-            </div>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20">
+      <section id="about" className="py-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">About Me</h2>
