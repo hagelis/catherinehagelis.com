@@ -1,84 +1,89 @@
 # Personal Portfolio Website
 
-A modern personal website built with React, Vite, and TailwindCSS. The site is deployed on AWS using S3 and CloudFront, with DNS managed through Route 53 and HTTPS provided by AWS Certificate Manager. This project serves as a professional portfolio and a demonstration of front-end development and practical cloud deployment skills.
+My personal portfolio website built with React, Vite, and TailwindCSS, showcasing my projects, skills, certifications, and background.  
+Deployed on AWS cloud architecture with S3 static hosting, CloudFront CDN, Route 53 DNS, and ACM-managed HTTPS.
+It also includes automated deployments powered by GitHub Actions.
 
 ## Features
-
-- Clean, responsive UI built with React, Vite, and TailwindCSS  
-- Hosted on Amazon S3 as a static site  
-- Distributed globally using Amazon CloudFront  
-- Custom domain managed through Amazon Route 53  
-- HTTPS enabled through AWS Certificate Manager  
-- Fully automated deployment pipeline using GitHub Actions  
-- Secure authentication between GitHub and AWS using IAM OIDC  
+• Clean, responsive UI built with React + TailwindCSS  
+• Dynamic sections for Projects, Skills, Certifications, and Contact  
+• Custom animations and modern gradient design  
+• Fully custom domain: catherinehagelis.com  
+• Secure HTTPS with automatic TLS via AWS Certificate Manager  
+• Global content delivery using CloudFront CDN  
+• Fast page loads with Vite asset optimization  
+• Zero-server, highly available cloud hosting  
+• Automated CI/CD using GitHub Actions  
 
 ## Tech Stack
 
-**Client:** React, Vite, TailwindCSS  
-**Cloud:** AWS S3, CloudFront, Route 53, ACM  
-**CI/CD:** GitHub Actions (OIDC-based authentication)  
+### Client
+• React  
+• Vite  
+• TailwindCSS  
+• Lucide Icons  
 
-## Getting Started
+### Cloud / Deployment
+• AWS S3 — static file hosting  
+• AWS CloudFront — CDN + HTTPS + caching  
+• AWS Route 53 — custom domain + DNS  
+• AWS Certificate Manager (ACM) — TLS certificate  
+• GitHub Actions — automated CI/CD pipeline  
+
+
+## Getting Started (Local Development)
 
 ### Prerequisites
+• Node.js (v16+ recommended)  
+• Git  
 
-- Node.js (v16 or higher recommended)  
-- Git  
+### 1. Clone the Repository
+git clone https://github.com/hagelis/catherinehagelis.com  
+cd catherinehagelis.com  
 
-### Local Setup
+### 2. Install Dependencies
+npm install  
 
-To run the project locally:
+### 3. Run the App Locally
+npm run dev  
 
-Clone the repository
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Start the development server:
-
-```bash
-npm run dev
-```
-
-The site will be available at:
-
-```
+Then open:  
 http://localhost:5173
-```
 
-## Deployment Pipeline (Informational Only)
+## Deployment (AWS)
 
-This project uses an automated CI/CD pipeline for *my own deployment process*.  
-The pipeline runs in GitHub Actions whenever changes are pushed to the `main` branch.
+This portfolio is deployed using the following AWS setup:
 
-The workflow performs:  
+### S3 (Static Hosting)
+• Stores production build files  
+• Static website hosting enabled  
+• Public read access configured  
 
-1. Installs dependencies  
-2. Builds the production bundle using Vite  
-3. Syncs the built files to an Amazon S3 bucket  
-4. Invalidates the associated CloudFront distribution so updated files propagate globally  
+### CloudFront
+• Origin: S3 website endpoint  
+• Viewer Protocol: Redirect HTTP → HTTPS  
+• Custom SSL certificate (ACM)  
+• Default root object: index.html  
+• Global edge caching + distribution  
 
-All AWS authentication is handled using GitHub’s OIDC integration, allowing secure, keyless access without storing long-lived credentials.  
+### Route 53
+• A-records for:  
+  – catherinehagelis.com  
+  – www.catherinehagelis.com  
+• Alias → CloudFront distribution  
 
-NOTE: This section is provided for informational purposes only to describe the architecture and deployment strategy used for this project.
+### ACM
+• Wildcard TLS certificate  
+• DNS validation via Route 53  
 
+## CI/CD (GitHub Actions)
 
-## Hosting Overview
+This project uses a GitHub Actions workflow for automated deployments:
 
-This project uses the following AWS services:
+• Builds the Vite app on every push to `main`  
+• Uploads build output to the S3 bucket  
+• Invalidates CloudFront cache automatically  
+• Fully automated production deployments with no manual steps required  
 
-- **Amazon S3** for static file hosting  
-- **Amazon CloudFront** for CDN distribution and HTTPS termination  
-- **Amazon Route 53** for DNS and domain management  
-- **AWS Certificate Manager** for TLS certificates  
-- **GitHub Actions** for continuous deployment  
-
-## Screenshot:
-![personal-site](https://github.com/user-attachments/assets/ef5f0cdc-25a4-4095-9f63-fe74537161b2)  
-
-## License
-
-This project is for personal use and professional demonstration.
+## Screenshots
+(Add images here)
