@@ -86,4 +86,5 @@ This project uses a GitHub Actions workflow for automated deployments:
 • Fully automated production deployments with no manual steps required  
 
 ## Screenshots
-(Add images here)
+<img width="1353" height="751" alt="Screenshot 2025-11-09 at 8 17 08 PM" src="https://github.com/user-attachments/assets/0c8e1a47-0c3f-41cc-bb6e-a74b3729ddde" />
+
