@@ -7,8 +7,8 @@ const PersonalWebsite = () => {
 
   const projects = [
     { title: "Personal Portfolio Website", 
-      description: "Developed a responsive personal website using React, Vite, and Tailwind CSS, then containerized and deployed it to AWS using Docker and Terraform. The site is fully automated with infrastructure as code and serves as a live example of practical DevOps deployment.", 
-      tech: ["React","Vite","Tailwindcss","Docker","Terraform","AWS S3","Route 53"], 
+      description: "Developed and built a responsive portfolio website using React, Vite, and Tailwind CSS, then deployed it to AWS using a cost-optimized setup with S3, CloudFront, Route 53, and ACM-secured HTTPS. Configured spend alerts and monitoring to maintain budget and ensure reliable performance.", 
+      tech: ["React","Vite","Tailwindcss","AWS S3","Route 53", "Cloudfront", "AWS Certificate Manager (ACM)", "AWS Budgets / Spend Alerts"], 
       github: "https://github.com/hagelis/catherinehagelis.com.git", 
       live: "https://catherinehagelis.com",
       image: "/images/personal-site.jpeg",
