@@ -6,36 +6,20 @@ const PersonalWebsite = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const projects = [
-    { title: "Personal Portfolio Website", 
+    { title: "Portfolio Website", 
       description: "Developed and built a responsive portfolio website using React, Vite, and Tailwind CSS, then deployed it to AWS using a cost-optimized setup with S3, CloudFront, Route 53, and ACM-secured HTTPS. Configured spend alerts and monitoring to maintain budget and ensure reliable performance.", 
       tech: ["React","Vite","Tailwindcss","AWS S3","Route 53", "Cloudfront", "AWS Certificate Manager (ACM)", "AWS Budgets / Spend Alerts"], 
       github: "https://github.com/hagelis/catherinehagelis.com.git", 
       live: "https://catherinehagelis.com",
       image: "/images/personal-site.jpeg",
-    },
-
-    { title: "AI Fitness Web App (Capstone Project) (Work In Progress...)", 
-      description: "Collaborated with a small team to design and build an AI-powered fitness platform that generates personalized workout plans and exercise videos. My focus was on the front-end UI using React and Tailwind, integrating APIs for AI-generated content, and managing user interactions through dashboards.", 
-      tech: ["React", "Tailwind", "Node.js", "Express", "PostgreSQL", "REST APIs", "AI Integration"], 
-      github: "#", 
-      live: "#", 
-      image: "/images/capstone.jpeg",
-    
-    },
-
-    { title: "Recipe Card Web App (Work In Progress...)", 
-      description: "Developed a full-stack recipe management application that allows users to create, edit, and organize their favorite recipes. Implemented the front-end with React and Tailwind CSS, and built a Node.js + Express backend connected to a PostgreSQL database. Fully dockerized for local and cloud deployment.", 
-      tech: ["React", "Node.js", "Express", "PostgreSQL", "Docker", "Tailwind"], 
-      github: "#", 
-      live: "#", 
-      image: "/images/recipe-app.jpeg",
     }
+
   ];
 
   const skills = [
-    { category: "Cloud Platforms", items: ["AWS, DigitalOcean"] },
-    { category: "DevOps Tools", items: ["Docker","Terraform","GitHub Actions","Kubernetes","Jenkins"] },
-    { category: "Programming", items: ["Bash","Java", "JavaScript (React, Vite)","Python","C-Languages"] },
+    { category: "Cloud Platforms", items: ["AWS"] },
+    { category: "DevOps Tools", items: ["Docker","Terraform","GitHub Actions"] },
+    { category: "Programming", items: ["Bash","Java", "JavaScript (React, Vite)","C-Languages"] },
     { category: "Infrastructure", items: ["Linux, macOS", "Windows","Monitoring","IaC","Tailwind CSS"] }
   ];
 
@@ -216,13 +200,16 @@ const PersonalWebsite = () => {
       <section id="projects" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Featured Projects</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Featured Project</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-8 justify-items-center">
+
             {projects.map((project, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 transition-all md:hover:scale-105 hover:scale-[1.02]">
+              <div 
+                key={index} 
+                className="max-w-lg bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 transition-all md:hover:scale-105 hover:scale-[1.02]">
                 <div className="h-48 overflow-hidden">
                   <img
                     src={project.image}
