@@ -114,11 +114,10 @@ const PersonalWebsite = () => {
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Recent Graduate & Aspiring DevOps Engineer</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">Computer Science Graduate | DevOps & Cloud</h3>
               <p className="text-gray-300 text-lg mb-6">
-                Computer Science student at Arizona State University (graduating December 2025) with a passion 
-                for DevOps practices, cloud infrastructure, and automation. I love bridging the gap between 
-                development and operations to create efficient, scalable systems.
+                Computer Science graduate focused on DevOps, cloud infrastructure, and automation. Passionate about 
+                bridging developement and operations to deliver efficient, scalable systems.
               </p>
               <p className="text-gray-300 text-lg mb-6">
                 Currently expanding my expertise in cloud platforms, containerization, CI/CD pipelines, 
@@ -251,20 +250,16 @@ const PersonalWebsite = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Get In Touch</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto"></div>
           </div>
-
           <div className="max-w-2xl mx-auto text-center">
-            <p className="text-gray-300 text-lg mb-8">
-              I'm excited to connect with DevOps teams, Cloud Engineers, and technology leaders. 
-              Let's discuss how I can contribute to your infrastructure and automation goals.
-            </p>
+            
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
               <div className="flex items-center justify-center mb-6">
                 <MessageSquare size={40} className="text-purple-400" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Ready to launch my DevOps career!</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Let's talk DevOps & Cloud Opportunities</h3>
               <p className="text-gray-300 mb-6">
-                As a recent CS graduate eager to break into DevOps and Cloud Engineering, I'd love to discuss 
-                entry-level opportunities, internships, or collaborative projects.
+                 I’m early in my career and excited to learn from DevOps and Cloud teams. 
+                 I’d love to talk about how I could contribute and grow with your team.
               </p>
               <a href="mailto:cat.hagelis@gmail.com" className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105">
                 <Mail size={20} /> Send me an email
@@ -278,7 +273,7 @@ const PersonalWebsite = () => {
       <footer className="bg-black/20 backdrop-blur-md border-t border-white/10 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <p className="text-gray-400">© 2025 Catherine Hagelis. Built with React, Vite, and Tailwind CSS.</p>
+            <p className="text-gray-400">© 2026 Catherine Hagelis. Built with React, Vite, and Tailwind CSS.</p>
           </div>
         </div>
       </footer>
