@@ -258,7 +258,6 @@ const PersonalWebsite = () => {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Let's talk DevOps & Cloud Opportunities</h3>
               <p className="text-gray-300 mb-6">
-                 Let's talk cloud engineering and DevOps opportunities. 
                  I bring AWS certifications, a CS foundation, real-world deployment experience, 
                  and I'm ready to contribute and grow with your team.
               </p>
