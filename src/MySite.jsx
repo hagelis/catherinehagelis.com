@@ -7,8 +7,8 @@ const PersonalWebsite = () => {
 
   const projects = [
     { title: "Portfolio Website", 
-      description: "Developed and built a responsive portfolio website using React, Vite, and Tailwind CSS, then deployed it to AWS using a cost-optimized setup with S3, CloudFront, Route 53, and ACM-secured HTTPS. Configured spend alerts and monitoring to maintain budget and ensure reliable performance.", 
-      tech: ["React","Vite","Tailwindcss","AWS S3","Route 53", "Cloudfront", "AWS Certificate Manager (ACM)", "AWS Budgets / Spend Alerts"], 
+      description: "Developed and built a responsive portfolio website using React, Vite, and Tailwind CSS, then deployed it to AWS using a cost-optimized setup with S3, CloudFront, Route 53, and ACM-secured HTTPS. Implemented automated CI/CD with GitHub Actions and OIDC for secure, keyless deployments and automated CloudFront cache invalidations. Configured spend alerts and monitoring to maintain budget and ensure reliable performance.", 
+      tech: ["React","Vite","Tailwindcss","Github Actions (CI/CD)","OIDC","AWS S3","Route 53", "Cloudfront", "AWS Certificate Manager (ACM)", "AWS Budgets / Spend Alerts"], 
       github: "https://github.com/hagelis/catherinehagelis.com.git", 
       live: "https://catherinehagelis.com",
       image: "/images/personal-site.jpeg",
@@ -117,7 +117,7 @@ const PersonalWebsite = () => {
               <h3 className="text-2xl font-bold text-white mb-6">Computer Science Graduate | DevOps & Cloud</h3>
               <p className="text-gray-300 text-lg mb-6">
                 Computer Science graduate focused on DevOps, cloud infrastructure, and automation. Passionate about 
-                bridging developement and operations to deliver efficient, scalable systems.
+                bridging development and operations to deliver efficient, scalable systems.
               </p>
               <p className="text-gray-300 text-lg mb-6">
                 Currently expanding my expertise in cloud platforms, containerization, CI/CD pipelines, 
@@ -258,8 +258,9 @@ const PersonalWebsite = () => {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Let's talk DevOps & Cloud Opportunities</h3>
               <p className="text-gray-300 mb-6">
-                 I’m early in my career and excited to learn from DevOps and Cloud teams. 
-                 I’d love to talk about how I could contribute and grow with your team.
+                 Let's talk cloud engineering and DevOps opportunities. 
+                 I bring AWS certifications, a CS foundation, real-world deployment experience, 
+                 and I'm ready to contribute and grow with your team.
               </p>
               <a href="mailto:cat.hagelis@gmail.com" className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105">
                 <Mail size={20} /> Send me an email
