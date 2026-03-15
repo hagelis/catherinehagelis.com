@@ -17,11 +17,12 @@ const PersonalWebsite = () => {
   ];
 
   const skills = [
-    { category: "Cloud Platforms", items: ["AWS"] },
-    { category: "DevOps Tools", items: ["Docker","Terraform","GitHub Actions"] },
-    { category: "Programming", items: ["Bash","Java", "JavaScript (React, Vite)","C-Languages"] },
-    { category: "Infrastructure", items: ["Linux, macOS", "Windows","Monitoring","IaC","Tailwind CSS"] }
+    { category: "Cloud Platforms", items: [{ name: "AWS", subitems: ["S3", "CloudFront", "Route 53", "ACM", "Budgets"] }] },
+    { category: "DevOps Tools", items: ["Docker", "GitHub Actions", "CI/CD", "OIDC"] },
+    { category: "Programming", items: ["Bash", "Java", "JavaScript (React, Vite)"] },
+    { category: "Infrastructure", items: ["Linux, macOS", "Windows", "Tailwind CSS"] }
   ];
+
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -201,7 +202,18 @@ const PersonalWebsite = () => {
                 <h3 className="text-xl font-bold text-white mb-4">{skillGroup.category}</h3>
                 <ul className="space-y-2">
                   {skillGroup.items.map((skill, skillIndex) => (
-                    <li key={skillIndex} className="text-gray-300 hover:text-white transition-colors">{skill}</li>
+                    typeof skill === "string" ? (
+                      <li key={skillIndex} className="text-gray-300 hover:text-white transition-colors">{skill}</li>
+                    ) : (
+                      <li key={skillIndex}>
+                        <span className="text-gray-300 hover:text-white transition-colors">{skill.name}</span>
+                        <ul className="ml-4 mt-1 space-y-1">
+                          {skill.subitems.map((sub, subIndex) => (
+                            <li key={subIndex} className="text-gray-400 text-sm">{sub}</li>
+                          ))}
+                        </ul>
+                      </li>
+                    )
                   ))}
                 </ul>
               </div>
