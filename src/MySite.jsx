@@ -171,7 +171,7 @@ const PersonalWebsite = () => {
 
             {/* Cloud Practitioner Badge */}
             <div className="p-3 flex items-center justify-center">
-              <a href="https://www.credly.com/badges/aa49179c-1925-463b-82eb-01be3c24f1f8/public_url" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+              <a href="https://www.credly.com/badges/aa49179c-1925-463b-82eb-01be3c24f1f8/public_url" target="_blank" rel="noopener noreferrer" className="inline-block hover:opacity-80 hover:scale-105 transition-all">
               <img
                 src="/badges/aws-certified-cloud-practitioner.png"
                 alt="AWS Certified Cloud Practitioner"
@@ -182,7 +182,7 @@ const PersonalWebsite = () => {
 
             {/* SAA Badge */}
             <div className="p-3 flex items-center justify-center">
-              <a href="https://www.credly.com/badges/39b24bc9-8fb0-475d-b577-7b7e2bc24387/public_url" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+              <a href="https://www.credly.com/badges/39b24bc9-8fb0-475d-b577-7b7e2bc24387/public_url" target="_blank" rel="noopener noreferrer" className="inline-block hover:opacity-80 hover:scale-105 transition-all">
               <img
                 src="/badges/aws-certified-solutions-architect-associate.png"
                 alt="AWS Certified Solutions Architect Associate"
