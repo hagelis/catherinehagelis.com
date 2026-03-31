@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Github, Mail, ExternalLink, Menu, X, MessageSquare, GraduationCap, Award } from 'lucide-react';
+import TrafficDashboard from './TrafficDashboard.jsx';
 
 const PersonalWebsite = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,12 +13,19 @@ const PersonalWebsite = () => {
       github: "https://github.com/hagelis/catherinehagelis.com.git", 
       live: "https://catherinehagelis.com",
       image: "/images/personal-site.jpeg",
+    },
+    {
+      title: "Serverless Analytics Pipeline",
+      description: "Built a serverless weekly traffic analytics system for this portfolio site using AWS Lambda, S3, EventBridge, DynamoDB, and SES. Integrated the Claude API to generate natural language summaries of CloudFront access logs, delivered via automated weekly email. Weekly metrics persist in DynamoDB and are visualized in the live dashboard below.",
+      tech: ["AWS Lambda", "EventBridge", "DynamoDB", "SES", "Secrets Manager", "CloudFront", "Claude API", "Node.js"],
+      image: "/images/metrics-project-image.jpeg",
+      dashboard: true
     }
 
   ];
 
   const skills = [
-    { category: "Cloud Platforms", items: [{ name: "AWS", subitems: ["S3", "CloudFront", "Route 53", "ACM", "Budgets"] }] },
+    { category: "Cloud Platforms", items: [{ name: "AWS", subitems: ["S3", "CloudFront", "Route 53", "ACM", "Lambda", "DynamoDB", "EventBridge", "Secrets Manager", "SES", "Budgets"] }] },
     { category: "DevOps Tools", items: ["Docker", "GitHub Actions", "CI/CD", "OIDC"] },
     { category: "Programming", items: ["Bash", "Java", "JavaScript (React, Vite)"] },
     { category: "Infrastructure", items: ["Linux, macOS", "Windows", "Tailwind CSS"] }
@@ -226,16 +234,15 @@ const PersonalWebsite = () => {
       <section id="projects" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Featured Project</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Featured Projects</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 justify-items-center">
-
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 justify-items-center items-start">
             {projects.map((project, index) => (
-              <div 
-                key={index} 
-                className="max-w-lg bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 transition-all md:hover:scale-105 hover:scale-[1.02]">
+              <div
+                key={index}
+                className="w-full max-w-lg bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 transition-all md:hover:scale-105 hover:scale-[1.02]">
                 <div className="h-48 overflow-hidden">
                   <img
                     src={project.image}
@@ -243,7 +250,6 @@ const PersonalWebsite = () => {
                     className="h-full w-full object-cover transform hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-white mb-3">{project.title}</h3>
                   <p className="text-gray-300 mb-4 text-sm">{project.description}</p>
@@ -252,17 +258,23 @@ const PersonalWebsite = () => {
                       <span key={techIndex} className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs">{tech}</span>
                     ))}
                   </div>
-                  <div className="flex space-x-4">
-                    <a 
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white hover:text-purple-300 transition-colors" 
-                      aria-label="External link">
-                      <ExternalLink size={20} />
+                  {project.github && (
+                    <div className="flex space-x-4 mb-4">
                       
-                    </a>
-                  </div>
+                      <a  href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white hover:text-purple-300 transition-colors"
+                        aria-label="External link">
+                        <ExternalLink size={20} />
+                      </a>
+                    </div>
+                  )}
+                  {project.dashboard && (
+                    <div className="mt-4 border-t border-white/10 pt-4">
+                      <TrafficDashboard />
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
