@@ -1,8 +1,8 @@
-# Personal Portfolio Website
+# Portfolio Website
 
-My personal portfolio website built with React, Vite, and TailwindCSS, showcasing my projects, skills, certifications, and background.  
+My portfolio website built with React, Vite, and TailwindCSS, showcasing my projects, skills, certifications, and background.  
 Deployed on AWS cloud architecture with S3 static hosting, CloudFront CDN, Route 53 DNS, and ACM-managed HTTPS.
-It also includes automated deployments powered by GitHub Actions.
+It also includes automated deployments powered by GitHub Actions and authenticates to AWS via OIDC.
 
 ## Features
 • Clean, responsive UI built with React + TailwindCSS  
@@ -13,7 +13,7 @@ It also includes automated deployments powered by GitHub Actions.
 • Global content delivery using CloudFront CDN  
 • Fast page loads with Vite asset optimization  
 • Zero-server, highly available cloud hosting  
-• Automated CI/CD using GitHub Actions  
+• Automated CI/CD using GitHub Actions and OIDC
 
 ## Tech Stack
 
@@ -28,7 +28,7 @@ It also includes automated deployments powered by GitHub Actions.
 • AWS CloudFront — CDN + HTTPS + caching  
 • AWS Route 53 — custom domain + DNS  
 • AWS Certificate Manager (ACM) — TLS certificate  
-• GitHub Actions — automated CI/CD pipeline  
+• GitHub Actions — automated CI/CD pipeline with OIDC
 
 
 ## Getting Started (Local Development)
@@ -57,7 +57,6 @@ This portfolio is deployed using the following AWS setup:
 ### S3 (Static Hosting)
 • Stores production build files  
 • Static website hosting enabled  
-• Public read access configured  
 
 ### CloudFront
 • Origin: S3 website endpoint  
@@ -80,6 +79,7 @@ This portfolio is deployed using the following AWS setup:
 
 This project uses a GitHub Actions workflow for automated deployments:
 
+• Authenticates to AWS via OIDC, no hardcoded credentials or stored secrets.  
 • Builds the Vite app on every push to `main`  
 • Uploads build output to the S3 bucket  
 • Invalidates CloudFront cache automatically  
