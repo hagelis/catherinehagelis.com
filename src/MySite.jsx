@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Github, Mail, ExternalLink, Menu, X, MessageSquare, GraduationCap, Award } from 'lucide-react';
+import { Github, Mail, Linkedin, ExternalLink, Menu, X, MessageSquare, GraduationCap, Award } from 'lucide-react';
 import TrafficDashboard from './TrafficDashboard.jsx';
 
 const PersonalWebsite = () => {
@@ -144,11 +144,20 @@ const PersonalWebsite = () => {
                   <Github size={24} />
                 </a>
 
-                <a 
-                  href={`mailto:${"cat.hagelis"}@${"gmail.com"}`} 
-                  className="text-white hover:text-purple-300 transition-colors" 
+                <a
+                  href={`mailto:${"cat.hagelis"}@${"gmail.com"}`}
+                  className="text-white hover:text-purple-300 transition-colors"
                   aria-label="Email">
                   <Mail size={24} />
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/catherine-hagelis"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-purple-300 transition-colors"
+                  aria-label="LinkedIn">
+                  <Linkedin size={24} />
                 </a>
 
               </div>
