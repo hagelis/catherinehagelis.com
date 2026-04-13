@@ -24,7 +24,7 @@ const TrafficDashboard = () => {
   }, []);
 
   const weeklyChartData = weeks.map(w => ({
-    week: w.week_start.slice(5),
+    week: w.week_start.slice(5).replace("-", "/"),
     total: w.total_requests,
     raw: w
   }));
