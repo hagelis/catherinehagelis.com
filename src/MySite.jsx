@@ -25,10 +25,10 @@ const PersonalWebsite = () => {
   ];
 
   const skills = [
-    { category: "Cloud Platforms", items: [{ name: "AWS", subitems: ["S3", "CloudFront", "Route 53", "ACM", "Lambda", "DynamoDB", "EventBridge", "Secrets Manager", "SES", "Budgets"] }] },
+    { category: "Cloud Platforms", items: [{ name: "AWS", subitems: ["S3", "CloudFront", "CloudWatch", "Route 53", "ACM", "Lambda", "DynamoDB", "EventBridge", "Secrets Manager", "SES", "Budgets"] }] },
     { category: "DevOps Tools", items: ["Docker", "GitHub Actions", "CI/CD", "OIDC"] },
-    { category: "Programming", items: ["Bash", "Java", "JavaScript (React, Vite)"] },
-    { category: "Infrastructure", items: ["Linux, macOS", "Windows", "Tailwind CSS"] }
+    { category: "Programming", items: ["Bash", "Java", "JavaScript (React, Vite)", "Python"] },
+    { category: "Infrastructure", items: ["Terraform", "Linux, macOS", "Windows", "Tailwind CSS"] }
   ];
 
 
