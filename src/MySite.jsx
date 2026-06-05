@@ -7,12 +7,19 @@ const PersonalWebsite = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const projects = [
-    { title: "Portfolio Website", 
-      description: "Developed and built a responsive portfolio website using React, Vite, and Tailwind CSS, then deployed it to AWS using a cost-optimized setup with S3, CloudFront, Route 53, and ACM-secured HTTPS. Implemented automated CI/CD with GitHub Actions and OIDC for secure, keyless deployments and automated CloudFront cache invalidations. Configured spend alerts and monitoring to maintain budget and ensure reliable performance.", 
-      tech: ["React","Vite","Tailwindcss","Github Actions (CI/CD)","OIDC","AWS S3","Route 53", "Cloudfront", "AWS Certificate Manager (ACM)", "AWS Budgets / Spend Alerts"], 
-      github: "https://github.com/hagelis/catherinehagelis.com.git", 
+    { title: "Portfolio Website",
+      description: "Developed and built a responsive portfolio website using React, Vite, and Tailwind CSS, then deployed it to AWS using a cost-optimized setup with S3, CloudFront, Route 53, and ACM-secured HTTPS. Implemented automated CI/CD with GitHub Actions and OIDC for secure, keyless deployments and automated CloudFront cache invalidations. Configured spend alerts and monitoring to maintain budget and ensure reliable performance.",
+      tech: ["React","Vite","Tailwindcss","Github Actions (CI/CD)","OIDC","AWS S3","Route 53", "Cloudfront", "AWS Certificate Manager (ACM)", "AWS Budgets / Spend Alerts"],
+      github: "https://github.com/hagelis/catherinehagelis.com.git",
       live: "https://catherinehagelis.com",
       image: "/images/personal-site.jpeg",
+    },
+    {
+      title: "IaC Portfolio Website",
+      description: "Provisioned cloud infrastructure from scratch using Terraform IaC, including a VPC, subnets, Internet Gateway, ALB, and ECS Fargate cluster. Containerized the application using Docker with a multi-stage build, stored the image in ECR, and served it through nginx on ECS Fargate. Designed reproducible infrastructure using IaC principles for consistent environment provisioning and on-demand teardown.",
+      tech: ["Terraform", "Docker", "AWS ECS Fargate", "AWS ECR", "ALB", "VPC", "nginx", "IaC"],
+      github: "https://github.com/hagelis/catherinehagelis.com-IaC",
+      image: "/images/mySite_IaC.jpeg",
     },
     {
       title: "Serverless Analytics Pipeline",
@@ -20,15 +27,15 @@ const PersonalWebsite = () => {
       tech: ["AWS Lambda", "EventBridge", "DynamoDB", "SES", "Secrets Manager", "CloudFront", "Claude API", "Node.js"],
       image: "/images/metrics-project-image.jpeg",
       dashboard: true
-    }
+    },
 
   ];
 
   const skills = [
-    { category: "Cloud Platforms", items: [{ name: "AWS", subitems: ["S3", "CloudFront", "CloudWatch", "Route 53", "ACM", "Lambda", "DynamoDB", "EventBridge", "Secrets Manager", "SES", "Budgets"] }] },
+    { category: "Cloud Platforms", items: [{ name: "AWS", subitems: ["S3", "CloudFront", "CloudWatch", "Route 53", "ACM", "Lambda", "DynamoDB", "EventBridge", "Secrets Manager", "SES", "Budgets", "ECS Fargate", "ECR", "ALB", "VPC"] }] },
     { category: "DevOps Tools", items: ["Docker", "GitHub Actions", "CI/CD", "OIDC"] },
     { category: "Programming", items: ["Bash", "Java", "JavaScript (React, Vite)", "Python"] },
-    { category: "Infrastructure", items: ["Terraform", "Linux, macOS", "Windows", "Tailwind CSS"] }
+    { category: "Infrastructure", items: ["Terraform", "nginx", "Linux, macOS", "Windows", "Tailwind CSS"] }
   ];
 
 
@@ -247,7 +254,7 @@ const PersonalWebsite = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 justify-items-center items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 justify-items-center items-stretch">
             {projects.map((project, index) => (
               <div
                 key={index}
