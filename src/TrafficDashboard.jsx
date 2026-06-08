@@ -51,7 +51,7 @@ const TrafficDashboard = () => {
     <defs>
       <linearGradient id="purpleGradient" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stopColor="#a855f7" />
-        <stop offset="100%" stopColor="#ec4899" />
+        <stop offset="100%" stopColor="#6d28d9" />
       </linearGradient>
     </defs>
   );
